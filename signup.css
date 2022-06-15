@@ -1,0 +1,21 @@
+h3{
+    margin-top: 100px;
+    margin-left: 10%;
+}
+#form{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    margin-right: 50%;
+}
+input{
+    border: none;
+    border-bottom: 1px solid black;
+    margin-bottom: 50px;
+    background-color: white;
+}
+form>input:last-child{
+    background-color: black;
+    height: 35px;
+    color: white;
+}

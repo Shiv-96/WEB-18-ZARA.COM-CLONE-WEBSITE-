@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <script
+      src="https://kit.fontawesome.com/d319f1b537.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .box1 > img {
+        height: 90px;
+      }
+      input {
+        border: none;
+        border-bottom: 1px solid black;
+        margin-right: 50px;
+        height: 20px;
+      }
+      #nav {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin: auto;
+      }
+      #section {
+        height: 20px;
+        border: none;
+        border-bottom: 1px solid black;
+      }
+      .box1 {
+        width: 50%;
+        cursor: pointer;
+      }
+      .box2 {
+        width: 45%;
+        display: flex;
+        justify-content: space-between;
+      }
+      i {
+        color: gray;
+        font-size: 25px;
+      }
+      a {
+        text-decoration: none;
+        color: gray;
+      }
+      .container1,
+      .container2,
+      .container3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* margin: auto; */
+        margin-top: 75px;
+      }
+      .container1 > img,
+      .container2 > img,
+      .container3 > img {
+        width: 50%;
+        height: 400px;
+        margin-left: 25%;
+      }
+      .container1 > .box3,
+      .container2 > .box4,
+      .container3 > .box5 {
+        width: 50%;
+        position: absolute;
+        left: 0px;
+        bottom: 50px;
+        left: 25%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .box3 > button,
+      .box4 > button,
+      .box5 > button {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: normal;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar Section -->
+    <div id="nav">
+      <div class="box1">
+        <img src="Zara_Logo.svg" alt="" />
+      </div>
+      <div class="box2">
+        <select id="section">
+          <option value="">Select the section</option>
+          <option value="Mens">Mens</option>
+          <option value="Womens">Womens</option>
+          <option value="Kids">Kids</option>
+        </select>
+        <input type="text" placeholder="SEARCH" />
+        <a href="login.html"><span>LOGIN</span></a>
+        <a href="#"><span>HELP</span></a>
+        <a href="signup.html"
+          ><i class="fa fa-shopping-bag" aria-hidden="true"></i
+        ></a>
+      </div>
+    </div>
+    <!-- Body Section -->
+    <!-- for women section -->
+
+    <div class="container1">
+      <img
+        class="bestProd"
+        src="https://static.zara.net/photos///contents/mkt/spots/ss22-north-woman-new/subhome-xmedia-13-2-in//w/1028/IMAGE-landscape-116bff2f-9a68-4dbc-9db4-88f1bb7a74e1-default_0.jpg?ts=1648724342119"
+        alt=""
+      />
+      <img
+        class="dressProd"
+        src="https://static.zara.net/photos///contents/mkt/spots/ss22-north-woman-dresses/subhome-xmedia-24//w/1028/IMAGE-landscape-690a85fc-b349-4c01-98c5-e6286b8a7a06-default_0.jpg?ts=1655110465083"
+        alt=""
+      />
+      <img
+        class="knitwearProd"
+        src="https://static.zara.net/photos///contents/mkt/spots/ss22-north-woman-new/subhome-xmedia-24//w/1028/IMAGE-landscape-a60ae12b-7986-4034-aa53-8d32ae2bd8ea-default_0.jpg?ts=1655122638907"
+        alt=""
+      />
+      <img
+        class="swimwearProd"
+        src="https://static.zara.net/photos///contents/mkt/spots/ss22-north-woman-swimwear/subhome-xmedia-24//w/1028/IMAGE-landscape-4e0caa4e-083f-4389-b81d-522c3d05e217-default_0.jpg?ts=1655113253828"
+        alt=""
+      />
+      <img
+        class="shoesProd"
+        src="https://static.zara.net/photos///contents/mkt/spots/ss22-north-woman-shoes-bags/subhome-xmedia-23-4//w/1028/IMAGE-landscape-7d1e4562-f417-4c8d-862c-90ee2a5d2515-default_0.jpg?ts=1655111234059"
+        alt=""
+      />
+      <!-- [[best seller, dresses], [knit weat, hgjh, jkhk]] -->
+      <div class="box3">
+        <button class="bestseller">BEST SELLERS</button>
+        <button class="dresses">DRESSES</button>
+        <button class="knitwear">KNITWEAR</button>
+        <button class="swimwear">SWIMWEAR</button>
+        <button class="shoes">SHOES</button>
+      </div>
+    </div>
+
+    <!-- for mens section -->
+
+    <div class="container2">
+      <img
+        class="newProd"
+        src="https://static.zara.net/photos///contents/mkt/spots/ss22-north-man-new/subhome-xmedia-24//w/1028/IMAGE-landscape-6b53085c-82e6-4c71-a2ba-b77d33b33db9-default_0.jpg?ts=1655135331644"
+        alt=""
+      />
+      <img
+        class="suitsProd"
+        src="https://static.zara.net/photos///contents/mkt/spots/ss22-north-man-trajes/subhome-xmedia-23//w/1028/IMAGE-landscape-86a47cfa-3fa1-451e-824a-0fc88b6f2fdd-default_0.jpg?ts=1654695356696"
+        alt=""
+      />
+      <img
+        class="joinLifeProd"
+        src="https://static.zara.net/photos///contents/mkt/spots/ss22-north-man-joinlife/subhome-xmedia-23//w/1028/IMAGE-landscape-4f6213e5-cf88-4d5b-9295-4a18c7450972-default_0.jpg?ts=1654696832147"
+        alt=""
+      />
+      <img
+        class="zaraAthleticzProd"
+        src="zara-athletes-take-to-the-streets-sporting-its-new-athleticz-line.jpg"
+        alt=""
+      />
+      <div class="box4">
+        <button class="new">NEW</button>
+        <button class="suits">SUITS</button>
+        <button class="joinLife">JOIN LIFE</button>
+        <button class="zaraAthleticz">ZAARA ATHLETICZ</button>
+      </div>
+    </div>
+
+    <!-- for kids section -->
+    
+    <div class="container3">
+      <img
+        class="girlProd"
+        src="https://static.zara.net/photos///contents/mkt/spots/ss22-north-kids-girl/subhome-xmedia-23//w/1028/IMAGE-landscape-b3873664-dbdd-40d5-98e7-a85bf838ebdf-default_0.jpg?ts=1654783480074"
+        alt=""
+      />
+      <img
+        class="boyProd"
+        src="https://static.zara.net/photos///contents/mkt/spots/ss22-north-kids-boy/subhome-xmedia-23-2//w/1028/IMAGE-landscape-76c49edc-8fb0-4f63-b76c-a6aa1f56272a-default_0.jpg?ts=1654783835064"
+        alt=""
+      />
+      <img
+        class="babyGirlProd"
+        src="https://static.zara.net/photos///contents/mkt/spots/ss22-north-kids-babygirl/subhome-xmedia-23-2//w/1028/IMAGE-landscape-66352372-a161-4005-a0bf-aa142015dc8b-default_0.jpg?ts=1654784313298"
+        alt=""
+      />
+      <img
+        class="babyBoyProd"
+        src="https://static.zara.net/photos///contents/mkt/spots/ss22-north-kids-babyboy/subhome-xmedia-23-2//w/1028/IMAGE-landscape-e12c37f2-e1b0-4f39-a940-a0c19863b753-default_0.jpg?ts=1654784960084"
+        alt=""
+      />
+      <div class="box5">
+        <button class="girl">NEW</button>
+        <button class="boy">SUITS</button>
+        <button class="babyGirl">JOIN LIFE</button>
+        <button class="babyBoy">ZAARA ATHLETICZ</button>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script src="index.js"></script>

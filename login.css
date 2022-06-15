@@ -1,0 +1,47 @@
+#container{
+    display: flex;
+    margin-left: 10%;
+}
+#form{
+    display: flex;
+    flex-direction: column;
+}
+input{
+    height: 25px;
+    border: none;
+    border-bottom: 1px solid grey;
+    margin-bottom: 35px;
+}
+#form>input:last-child{
+    background-color: black;
+    color: white;
+    height: 35px;
+    cursor: pointer;
+}
+a{
+    margin-bottom: 35px;
+    text-decoration: none;
+    color: gray;
+    font-size: 12px;
+}
+.box{
+    width: 25%;
+}
+.box1{
+    width: 40%;
+    margin-left: 10%;
+}
+p{
+    color: gray;
+}
+b{
+    color: black;
+}
+button{
+    width: 60%;
+    height: 35px;
+    margin-top: 65px;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
