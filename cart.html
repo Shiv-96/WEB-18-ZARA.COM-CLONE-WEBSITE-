@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <style>
+      /* nav section */
+
+      .box1 > img {
+        height: 90px;
+      }
+      input {
+        border: none;
+        border-bottom: 1px solid black;
+        margin-right: 50px;
+        height: 20px;
+      }
+      #nav {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin: auto;
+      }
+      #section {
+        height: 20px;
+        border: none;
+        border-bottom: 1px solid black;
+      }
+      .box1 {
+        width: 50%;
+        cursor: pointer;
+      }
+      .box2 {
+        width: 45%;
+        display: flex;
+        justify-content: space-between;
+      }
+      a {
+        text-decoration: none;
+        color: gray;
+      }
+
+      /* body section */
+
+      #container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        width: 90%;
+        margin: auto;
+      }
+      #conatiner > .box3 {
+        display: flex;
+        flex-direction: row;
+        width: 15%;
+        border: 1px solid red;
+      }
+      .box3 > img {
+        width: 70%;
+      }
+      .box6 {
+        display: flex;
+      }
+      #container > div > .box4 {
+        display: flex;
+        flex-direction: column;
+        margin-left: -100px;
+        width: 300px;
+        height: 400px;
+        justify-content: space-between;
+        margin-top: 63px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="nav">
+      <div class="box1">
+        <img src="Zara_Logo.svg" alt="" />
+      </div>
+      <div class="box2">
+        <input type="text" placeholder="SEARCH" />
+        <a href="login.html"><span>LOGIN</span></a>
+        <a href="#"><span>HELP</span></a>
+      </div>
+    </div>
+    <div id="container">
+      <!-- data will append here -->
+    </div>
+  </body>
+</html>
+
+<script>
+  document.querySelector(".box1>img").addEventListener("click", index);
+
+  function index() {
+    window.location.href = "index.html";
+  }
+  var cartArr = JSON.parse(localStorage.getItem("cartData"));
+  // console.log(cartArr);
+  displayCart(cartArr);
+
+  function displayCart(cartArr) {
+    cartArr.forEach(function (el, i) {
+      var box1 = document.createElement("div");
+      box1.className = "box3";
+
+      var productName = document.createElement("h4");
+      productName.innerText = el.productName;
+
+      var image = document.createElement("img");
+      image.src = el.image;
+      box1.append(productName, image);
+
+      var box2 = document.createElement("div");
+      box2.className = "box4";
+      var number = document.createElement("span");
+      number.id = "box10";
+      number.innerText = el.quantity;
+
+      var button = document.createElement("button");
+      button.innerText = "+1";
+      button.style.cursor = "pointer";
+      button.style.marginLeft = "5px";
+      // var z = number.innerText;
+      button.addEventListener("click", function () {
+        var z = incFun(el.quantity);
+        el.quantity = z;
+        number.innerText = z;
+        localStorage.setItem("cartData", JSON.stringify(cartArr))
+        window.location.reload()
+      });
+      var z = el.quantity
+
+      var button1 = document.createElement("button");
+      button1.innerText = "-1";
+      button1.style.cursor = "pointer";
+      button1.style.marginRight = "5px";
+
+      button1.addEventListener("click", function(){
+        var z = decFun(el.quantity)
+        el.quantity = z;
+        number.innerText = z
+        if(number.innerText == 0){
+          delFun(i)
+        }
+      });
+      
+      var box3 = document.createElement("div");
+      box3.className = "box5";
+
+      box3.append(button1, number, button);
+      //   var x = el.price
+      y = el.price.split(" ");
+      x = y[1].split(",");
+      if (x.length == 2) {
+        x = +x[0] * 1000 + +x[1];
+      } else {
+        x = +x[0];
+      }
+      //   console.log(x);
+      var price = document.createElement("p");
+      price.innerText = z + " x " + el.price;
+
+      var total = document.createElement("p");
+      total.innerText = y[0] + " " + eval(z * x);
+
+      var box4 = document.createElement("div");
+      box4.append(price, total);
+      var remove = document.createElement("button");
+      remove.innerText = "DELETE";
+      remove.style.backgroundColor = "transparent";
+      remove.style.border = "none";
+      remove.style.width = "65px";
+      remove.style.cursor = "pointer";
+
+      remove.addEventListener("click", function () {
+        delFun(i);
+      });
+
+      box2.append(box3, box4, remove);
+
+      var box5 = document.createElement("div");
+      box5.className = "box6";
+      box5.append(box1, box2);
+      document.querySelector("#container").append(box5);
+    });
+  }
+  function delFun(i) {
+    cartArr.splice(i, 1);
+    localStorage.setItem("cartData", JSON.stringify(cartArr));
+    window.location.reload();
+    displayCart(cartArr);
+  }
+
+  // var z = number.innerText;
+  // var z = 0;
+  // var a = cartArr.quantity
+  function incFun(el) {
+    el++;
+    // localStorage.setItem("shiv",el);
+    // console.log(el)
+    return el;
+  }
+
+  function decFun(el){
+    el--;
+    return el;
+  }
+</script>

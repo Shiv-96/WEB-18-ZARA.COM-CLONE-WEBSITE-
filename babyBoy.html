@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kids-babyboy</title>
+    <script
+      src="https://kit.fontawesome.com/d319f1b537.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="nav">
+      <div class="box1">
+        <img src="Zara_Logo.svg" alt="" />
+      </div>
+      <div class="box2">
+        <input type="text" placeholder="SEARCH" />
+        <a href="login.html"><span>LOGIN</span></a>
+        <a href="#"><span>HELP</span></a>
+        <a href="cart.html"
+          ><i class="fa fa-shopping-bag" aria-hidden="true"></i
+        ></a>
+      </div>
+    </div>
+    <div id="container">
+      <!-- data will append here -->
+    </div>
+  </body>
+</html>
+
+<script>
+  document.querySelector(".box1>img").addEventListener("click", goToIndex);
+
+  function goToIndex() {
+    window.location.href = "index.html";
+  }
+
+  var babyboylArr = JSON.parse(localStorage.getItem("babyBoyData"));
+
+  displayData(babyboylArr);
+
+  function displayData(babyboyArr) {
+    babyboyArr.forEach(function (el) {
+      var box = document.createElement("div");
+      box.className = "box";
+      box.style.cursor = "pointer";
+
+      var image = document.createElement("img");
+      image.src = el.image_url;
+
+      box.append(image);
+
+      document.querySelector("#container").append(box);
+
+      box.addEventListener("click", showProd);
+      function showProd() {
+        localStorage.setItem("Product", JSON.stringify(el));
+        window.location.href = "common.html";
+      }
+    });
+  }
+</script>

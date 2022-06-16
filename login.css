@@ -1,3 +1,40 @@
+/* navbar section */
+
+.box1 > img {
+    height: 90px;
+  }
+  input {
+    border: none;
+    border-bottom: 1px solid black;
+    margin-right: 50px;
+    height: 20px;
+  }
+  #nav {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+  }
+  #section {
+    height: 20px;
+    border: none;
+    border-bottom: 1px solid black;
+  }
+  .box1 {
+    width: 50%;
+    cursor: pointer;
+  }
+  .box2 {
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+  }
+  a {
+    text-decoration: none;
+    color: gray;
+  }
+
+/* body section */
 #container{
     display: flex;
     margin-left: 10%;

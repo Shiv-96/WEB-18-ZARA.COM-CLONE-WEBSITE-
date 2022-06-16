@@ -38,25 +38,16 @@
     color: gray;
   }
 
-/* body section */
-h3{
-    margin-top: 100px;
-    margin-left: 10%;
-}
-#form{
-    display: flex;
-    flex-direction: column;
-    margin-left: 10%;
-    margin-right: 50%;
-}
-input{
-    border: none;
-    border-bottom: 1px solid black;
-    margin-bottom: 50px;
-    background-color: white;
-}
-form>input:last-child{
-    background-color: black;
-    height: 35px;
-    color: white;
-}
+  /* body section */
+
+  #container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 90%;
+    gap: 10px;
+    margin: auto;
+    margin-top: 25px;
+  }
+  #container > div > img {
+    width: 100%;
+  }
