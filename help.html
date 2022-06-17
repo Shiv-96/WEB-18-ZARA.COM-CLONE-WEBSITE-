@@ -6,25 +6,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Help</title>
     <style>
+      /* navbar section */
+
+      .box1 > img {
+        height: 90px;
+      }
+      input {
+        border: none;
+        border-bottom: 1px solid black;
+        margin-right: 50px;
+        height: 20px;
+      }
+      #nav {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        position: fixed;
+        top: 20px;
+        left: 5%;
+      }
+      #section {
+        height: 20px;
+        border: none;
+        border-bottom: 1px solid black;
+      }
+      .box1 {
+        width: 50%;
+        cursor: pointer;
+      }
+      .box9 {
+        width: 45%;
+        display: flex;
+        justify-content: space-between;
+      }
+      i {
+        color: gray;
+        font-size: 25px;
+      }
+      a {
+        text-decoration: none;
+        color: gray;
+      }
+
+      /* body section */
+
       #container {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         width: 80%;
         margin-left: 100px;
         gap: 20px;
+        margin-left: 5%;
       }
-      #container> div{
+      #container > div {
         width: 100px;
         height: 200px;
-        border: 1px solid red;
-        margin-right: 100px;
+        margin-right: 0px;
+        
       }
-      div>h5{
+      div > h5 {
         text-align: center;
+      }
+      h4{
+        margin-top: 150px;
+        margin-left: 5%;
       }
     </style>
   </head>
   <body>
+    <!-- navbar section -->
+
+    <div id="nav">
+      <div class="box1">
+        <img src="Zara_Logo.svg" alt="" />
+      </div>
+      <div class="box9">
+        <input type="text" placeholder="SEARCH" />
+        <a href="login.html"><span>LOGIN</span></a>
+        <a href="#"><span>HELP</span></a>
+        <a href="cart.html"
+          ><i class="fa fa-shopping-bag" aria-hidden="true"></i
+        ></a>
+      </div>
+    </div>
+
+    <!-- body section -->
+
     <h4>HELP</h4>
     <div id="container">
       <div class="box1">
