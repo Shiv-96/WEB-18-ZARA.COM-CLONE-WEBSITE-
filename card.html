@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>card</title>
+    <style>
+      /* nav section */
+
+      .box1 > img {
+        height: 90px;
+      }
+      input {
+        border: none;
+        border-bottom: 1px solid black;
+        margin-right: 50px;
+        height: 20px;
+      }
+      #nav {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin: auto;
+        position: fixed;
+        top: 15px;
+        left: 5%;
+      }
+      #section {
+        height: 20px;
+        border: none;
+        border-bottom: 1px solid black;
+      }
+      .box1 {
+        width: 50%;
+        cursor: pointer;
+      }
+      .box2 {
+        width: 45%;
+        display: flex;
+        justify-content: space-between;
+      }
+      i {
+        color: gray;
+        font-size: 25px;
+      }
+      a {
+        text-decoration: none;
+        color: gray;
+      }
+      /* body section */
+
+      h3 {
+        margin-left: 5%;
+        margin-top: 150px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin-left: 5%;
+      }
+      input {
+        height: 30px;
+        margin-bottom: 15px;
+      }
+      form > input:last-child {
+        background-color: black;
+        color: white;
+      }
+
+      /* footer section */
+
+      .footer {
+        height: 60vh;
+        display: flex;
+        margin-left: 2%;
+        margin-top: 100px;
+      }
+      .footer > div > b {
+        margin-left: 40px;
+      }
+      ul {
+        list-style: none;
+        line-height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- navbar section -->
+
+    <div id="nav">
+      <div class="box1">
+        <img src="Zara_Logo.svg" alt="" />
+      </div>
+      <div class="box2">
+        <a href="login.html"><span>LOGIN</span></a>
+        <a href="#"><span>HELP</span></a>
+      </div>
+    </div>
+
+    <!-- body section -->
+    <h3>ENTER YOUR CARD DETAILS</h3>
+    <form action="" id="form">
+      <input type="number" id="number" placeholder="CARD NUMBER" />
+      <input type="month" name="" id="date" placeholder="expiry date" />
+      <input type="text" id="name" placeholder="CARD HOLDER" />
+      <input type="password" name="" id="password" placeholder="cvv" />
+      <h3></h3>
+      <input type="submit" value="PAY THE AMMOUNT" />
+    </form>
+
+    <!-- footer section -->
+
+    <div class="footer">
+      <div>
+        <b>HELP</b>
+        <ul>
+          <li>SHOP AT ZARA.COM</li>
+          <li>PRODUCT</li>
+          <li>PAYMENT</li>
+          <li>SHIPPING</li>
+          <li>EXCHANGE AND RETURN</li>
+          <li>SHOPS AND COMPANY</li>
+          <li>CLOTHES COLLECTION PROGRAMME</li>
+          <li>MY ACCOUNT</li>
+        </ul>
+      </div>
+      <div>
+        <b>FOLLOW US</b>
+        <ul>
+          <li>NEWSLETTER</li>
+          <li>INSTAGRAMME</li>
+          <li>FACEBOOK</li>
+          <li>TWITTER</li>
+          <li>PRINTEREST</li>
+          <li>YOUTUBE</li>
+        </ul>
+      </div>
+      <div>
+        <b>COMPANY</b>
+        <ul>
+          <li>ABOUT US</li>
+          <li>JOIN LIFE</li>
+          <li>OFFICES</li>
+          <li>STORES</li>
+          <li>WORK WITH US</li>
+        </ul>
+      </div>
+      <div>
+        <b>POLICIES</b>
+        <ul>
+          <li>PRIVACY POLICY</li>
+          <li>PURCHASE CONDITIONS</li>
+          <li>COOKIES SETTING</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  var price = localStorage.getItem("price");
+  document.querySelector("h3").innerText = "TOTAL AMOUNT  ₹ " + price;
+
+  document.querySelector("form").addEventListener("submit", payTheAmount);
+
+  function payTheAmount() {
+    event.preventDefault();
+
+    var data = {
+      cardNumber: form.number.value,
+      date: form.date.value,
+      name: form.name.value,
+      password: form.password.vale,
+    };
+    if (data.cardNumber == "") {
+      alert("You need to fill the correct details here for order");
+    } else if (data.date == "") {
+      alert("You need to fill the correct details here for order");
+    } else if (data.name == "") {
+      alert("You need to fill the correct details here for order");
+    } else if (data.password == "") {
+      alert("You need to fill the correct details here for order");
+    } else {
+      alert("Your order has been placed");
+    }
+  }
+</script>

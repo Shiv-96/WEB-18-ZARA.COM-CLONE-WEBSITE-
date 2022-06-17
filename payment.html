@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>payment</title>
+    <style>
+      /* navbar section */
+
+      .box1 > img {
+        height: 90px;
+      }
+      input {
+        border: none;
+        border-bottom: 1px solid black;
+        margin-right: 50px;
+        height: 20px;
+      }
+      #nav {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin: auto;
+        position: fixed;
+        top: 15px;
+        left: 5%;
+      }
+      #section {
+        height: 20px;
+        border: none;
+        border-bottom: 1px solid black;
+      }
+      .box1 {
+        width: 50%;
+        cursor: pointer;
+      }
+      .box2 {
+        width: 45%;
+        display: flex;
+        justify-content: space-between;
+      }
+      i {
+        color: gray;
+        font-size: 25px;
+      }
+      a {
+        text-decoration: none;
+        color: gray;
+      }
+
+      /* body section */
+      #nav + h3 {
+        margin-top: 150px;
+        margin-left: 5%;
+      }
+      #container {
+        display: grid;
+        width: 70%;
+        margin-left: 5%;
+        grid-template-columns: repeat(5, 1fr);
+      }
+      #container > div {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        padding: 20px;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        align-content: flex-start;
+      }
+      #container > div:hover {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+      #container > div > img {
+        height: 148px;
+        width: 100px;
+      }
+      span {
+        text-align: center;
+      }
+      h3 + b {
+        color: red;
+        margin-left: 5%;
+      }
+
+      /* payment details */
+      .payment {
+        display: flex;
+        flex-direction: row-reverse;
+        position: fixed;
+        bottom: 0px;
+        right: 10%;
+        width: 90%;
+        background-color: hsl(0, 0%, 100%);
+      }
+      .payment > div:first-child {
+        background-color: black;
+        height: 50px;
+        width: 250px;
+        margin-top: 50px;
+        color: white;
+        align-items: center;
+        /* justify-content: center; */
+        margin-top: 20px;
+      }
+      .payment > .button > h4 {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0px;
+        margin-top: 18px;
+      }
+      .payment > div:last-child {
+        padding: 20px;
+        margin-right: 50px;
+        text-align: end;
+      }
+      .payment > div > p {
+        margin: 0px;
+      }
+      .payment > .text > h4 {
+        margin: 0px;
+      }
+
+      /* footer section */
+
+      .footer {
+        height: 60vh;
+        display: flex;
+        margin-left: 2%;
+        margin-top: 100px;
+      }
+      .footer > div > b {
+        margin-left: 40px;
+      }
+      ul {
+        list-style: none;
+        line-height: 30px;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <!-- nav section -->
+
+    <div id="nav">
+      <div class="box1">
+        <img src="Zara_Logo.svg" alt="" />
+      </div>
+      <div class="box2">
+        <a href="login.html"><span>LOGIN</span></a>
+        <a href="#"><span>HELP</span></a>
+      </div>
+    </div>
+
+    <!-- body section -->
+    <h3>CHOOSE PAYMENT METHOD</h3>
+    <b>Note:-</b>
+    <b>Currently don't have the net-banking facility</b>
+    <div id="container">
+      <div>
+        <img
+          src="https://static.zara.net/static/images/payment/payment/icon-payment-visa.svg"
+          alt=""
+        />
+        <span>VISA</span>
+      </div>
+      <div>
+        <img
+          src="https://static.zara.net/static/images/payment/payment/icon-payment-mastercard.svg"
+          alt=""
+        />
+        <span>MASTERCARD</span>
+      </div>
+      <div>
+        <img
+          src="https://static.zara.net/static/images/payment/payment/icon-payment-amex_2.svg"
+          alt=""
+        />
+        <span>AMERICAN EXPRESS</span>
+      </div>
+      <div>
+        <img
+          src="https://static.zara.net/static/images/payment/payment/ru-pay.svg"
+          alt=""
+        />
+        <span>RUPAY</span>
+      </div>
+      <div>
+        <img
+          src="https://static.zara.net/static/images/payment/payment/net-banking.svg"
+          alt=""
+        />
+        <span>NET BANKING</span>
+      </div>
+      <div>
+        <img
+          src="https://static.zara.net/static/images/payment/payment/co-djpen.svg"
+          alt=""
+        />
+        <span>CASH ON DELIVERY</span>
+      </div>
+      <div>
+        <img
+          src="https://static.zara.net/static/images/payment/payment/in.svg"
+          alt=""
+        />
+        <span>IN CARD</span>
+      </div>
+    </div>
+
+    <!-- payment details -->
+
+    <div class="payment">
+      <div class="button">
+        <h4>CONTINUE</h4>
+      </div>
+      <div class="text">
+        <h4></h4>
+        <p>INCLUDING GST</p>
+        <p>* EXCL SHIPPING COST</p>
+      </div>
+    </div>
+
+    <!-- footer section -->
+
+    <div class="footer">
+      <div>
+        <b>HELP</b>
+        <ul>
+          <li>SHOP AT ZARA.COM</li>
+          <li>PRODUCT</li>
+          <li>PAYMENT</li>
+          <li>SHIPPING</li>
+          <li>EXCHANGE AND RETURN</li>
+          <li>SHOPS AND COMPANY</li>
+          <li>CLOTHES COLLECTION PROGRAMME</li>
+          <li>MY ACCOUNT</li>
+        </ul>
+      </div>
+      <div>
+        <b>FOLLOW US</b>
+        <ul>
+          <li>NEWSLETTER</li>
+          <li>INSTAGRAMME</li>
+          <li>FACEBOOK</li>
+          <li>TWITTER</li>
+          <li>PRINTEREST</li>
+          <li>YOUTUBE</li>
+        </ul>
+      </div>
+      <div>
+        <b>COMPANY</b>
+        <ul>
+          <li>ABOUT US</li>
+          <li>JOIN LIFE</li>
+          <li>OFFICES</li>
+          <li>STORES</li>
+          <li>WORK WITH US</li>
+        </ul>
+      </div>
+      <div>
+        <b>POLICIES</b>
+        <ul>
+          <li>PRIVACY POLICY</li>
+          <li>PURCHASE CONDITIONS</li>
+          <li>COOKIES SETTING</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  document
+    .querySelector("#container>div:nth-child(1)")
+    .addEventListener("click", visa);
+  function visa() {
+    window.location.href = "card.html";
+  }
+  document
+    .querySelector("#container>div:nth-child(2)")
+    .addEventListener("click", mastercard);
+  function mastercard() {
+    window, (location.href = "card.html");
+  }
+  document
+    .querySelector("#container>div:nth-child(3)")
+    .addEventListener("click", americanExpress);
+  function americanExpress() {
+    window.location.href = "card.html";
+  }
+  document
+    .querySelector("#container>div:nth-child(4)")
+    .addEventListener("click", rupay);
+  function rupay() {
+    window.location.href = "card.html";
+  }
+  document
+    .querySelector("#container>div:nth-child(5)")
+    .addEventListener("click", netBanking);
+  function netBanking() {
+    alert(
+      "Currently this facility is not available. Please select other option"
+    );
+  }
+  document
+    .querySelector("#container>div:nth-child(6)")
+    .addEventListener("click", cod);
+  function cod() {
+    alert("Your order has been succesfully placed");
+  }
+  document
+    .querySelector("#container>div:nth-child(7)")
+    .addEventListener("click", inCard);
+  function inCard() {
+    window.location.href = "card.html";
+  }
+  var price = localStorage.getItem("price");
+  document.querySelector(".text>h4").innerText = "TOTAL   ₹ " + price;
+</script>

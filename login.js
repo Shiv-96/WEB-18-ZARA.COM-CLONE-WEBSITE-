@@ -14,6 +14,9 @@ function login(event){
         password: form.password.value,
     }
     var value = false;
+    if(myData.length == 0){
+        alert("Plaease crete your account first")
+    }
     for(var i = 0; i < myData.length; i++){
         if(data.email == "" || data.password == ""){
             value = false;

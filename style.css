@@ -13,7 +13,9 @@
     display: flex;
     justify-content: space-between;
     width: 90%;
-    margin: auto;
+    position: fixed;
+    top: 20px;
+    left: 5%;
   }
   #section {
     height: 20px;
@@ -46,8 +48,51 @@
     width: 90%;
     gap: 10px;
     margin: auto;
-    margin-top: 25px;
+    margin-top: 100px;
   }
   #container > div > img {
     width: 100%;
+  }
+
+  /* footer section */
+
+  .footer {
+    height: 60vh;
+    display: flex;
+    margin-left: 2%;
+    margin-top: 100px;
+  }
+  .footer>div>b{
+    margin-left: 40px;
+  }
+  ul{
+    list-style: none;
+    line-height: 30px;
+  }
+
+  /* for responsive */
+
+  /* for medium screen */
+  @media all and (min-width: 768px) and (max-width: 1024px){
+    #container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      width: 90%;
+      gap: 10px;
+      margin: auto;
+      margin-top: 100px;
+    }
+  }
+
+  /* for samll screen */
+
+  @media all and (min-width: 320px) and (max-width: 768px){
+    #container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      width: 90%;
+      gap: 10px;
+      margin: auto;
+      margin-top: 100px;
+    }
   }
